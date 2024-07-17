@@ -3,3 +3,97 @@ Theme name: LawFirm
 Author: Eslam Hamdallah
 Description: there is no description yet 
 version: 1.0.0*/
+* {
+  font-family: "IBM-Plex-Sans";
+}
+.menu-header-nave-bar-container ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  direction: ltr;
+}
+.menu-header-nave-bar-container ul li {
+  text-align: center;
+}
+.menu-header-nave-bar-container ul li a {
+  padding: 10px 20px;
+  position: relative;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+.menu-header-nave-bar-container ul li a:hover {
+  color: #be8d25;
+  opacity: 1;
+}
+.menu-header-nave-bar-container ul li a::after {
+  content: "";
+  transition: 0.3s;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #be8d25;
+  right: 50%;
+  border-radius: 0;
+  bottom: -5px;
+  transform: translate(50%, 0);
+}
+.menu-header-nave-bar-container ul li a:hover::after {
+  width: 100%;
+  border-radius: 5px;
+}
+/* ===================================================== fonts =================================================== */
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Thin.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Thin.woff2) format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-ExtraLight.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-ExtraLight.woff2)
+      format("woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Light.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Light.woff2) format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Regular.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Regular.woff2)
+      format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Medium.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Medium.woff2)
+      format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-SemiBold.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-SemiBold.woff2)
+      format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Bold.ttf)
+      format("turetype"),
+    url(ibm_plex_sans_arabic_font/IBMPlexSansArabic-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+/* ===================================================== fonts =================================================== */

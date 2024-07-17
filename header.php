@@ -80,12 +80,12 @@
             <path d="M118.124 30.0046C118.124 30.4916 118.464 30.8871 118.884 30.888C119.305 30.8888 119.646 30.4947 119.647 30.0076C119.648 29.5206 119.307 29.125 118.887 29.1242C118.466 29.1234 118.125 29.5175 118.124 30.0046Z" fill="#BE8D25"></path>
         </svg>
     </div><!-- this is the header things wrapper -->
-    <nav class="col-span-4">
+    <nav class="nave-menu-container text-main-white col-span-4 flex justify-end items-center gap-4">
 
         <?php wp_nav_menu() // to add the nav menu ?>
 
         <div class="sign-button">
-            <a href="#">احجز الان</a>
+            <a class="text-main-gold border border-main-gold rounded-xl px-10 py-3 duration-300 hover:text-main-white hover:bg-main-gold " href="#">احجز الان</a>
         </div>
     </nav>
     </header>
