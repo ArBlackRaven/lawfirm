@@ -143,7 +143,8 @@
         
 
         <div class="absolute bg-main-black border-2 border-t-0 border-main-gold flex justify-evenly items-center
-                    h-[3vh] phone:text-[0.7rem] phone:w-[90%] xl:w-70% rounded-b-3xl bottom-0 right-50% translate-x-50% translate-y-100% text-main-gold 
+                    phone:h-[3vh] lg:h-[5vh] lg:text-[1.2rem] phone:text-[0.7rem] phone:w-[90%] xl:w-70% rounded-b-3xl bottom-0 right-50% translate-x-50% 
+                    translate-y-100% text-main-gold 
                     bg-opacity-70 backdrop-blur-md" > <!--this is for the informations bar (absolute)-->
 
             <p> الرياض 0555559177 </p>

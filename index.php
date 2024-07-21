@@ -107,26 +107,26 @@ get_header();
     
     
     <section  class="h-fit py-[100px] px-[20px] text-main-white bg-main-black text-center flex flex-col justify-center items-center"> <!-- why us is the best section -->
-        <p class="mb-16 font-semibold">
+        <p class="phone:text-[2.5rem] mb-16 font-semibold lg:text-[3rem]">
             لماذا نحن الافضل
         </p>
-        <p class="">
+        <p class="phone:text-[1.5rem] lg:text-[2rem]">
             حلول قانونية مبتكرة: نقدم حلولًا قانونية إبداعية وفعالة لقضاياك القانونية 
         </p>
         <div class="mt-10 grid lg:w-[70%] xl:w-auto lg:grid-rows-1 lg:grid-cols-3 phone:grid-rows-3 phone:grid-cols-1"> <!-- here is the three cards -->
-            <div class="bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] phone:rounded-tl-3xl 
+            <div class=" bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] phone:rounded-tl-3xl 
                             phone:rounded-tr-3xl phone:rounded-br-none lg:rounded-tl-none lg:rounded-br-3xl ">
-                <p class=" pb-12">التواصل</p><!-- card title -->
-                <p class="">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
+                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12">التواصل</p><!-- card title -->
+                <p class="phone:text-[1.2rem] lg:text-[1.2rem]">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
             </div>
             <div class="bg-spicial-2 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] ">
-                <p class=" pb-12">التواصل</p><!-- card title -->
-                <p class="">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
+                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12">التواصل</p><!-- card title -->
+                <p class="phone:text-[1.2rem] lg:text-[1.2rem]">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
             </div>
             <div class="bg-spicial-3 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] 
                             phone:rounded-br-3xl phone:rounded-bl-3xl lg:rounded-br-none lg:rounded-tl-3xl ">
-                <p class=" pb-12">التواصل</p><!-- card title -->
-                <p class="">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
+                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12">التواصل</p><!-- card title -->
+                <p class="phone:text-[1.2rem] lg:text-[1.2rem]">شراكة مع العملاء : نحن نقدم خدمة شخصية ونبني علاقات طويلة الامد مع عملائنا</p><!-- card content -->
             </div>
         </div>
     </section>
