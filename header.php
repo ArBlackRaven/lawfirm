@@ -123,7 +123,7 @@
 
             <div class="menu-header-nave-bar-container ">
 
-                <?php  wp_nav_menu() // to add the nav menu ?>
+                <?php  wp_nav_menu(array("theme_location"=>"nav_bar")) // to add the nav menu ?>
 
             </div>
 
