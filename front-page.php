@@ -4,10 +4,11 @@ get_header();
 <div class="fron-page-wrapper bg-white overflow-hidden">
     <section class="
                     phone:h-fit phone:pb-[100px] lg:pb-[200px] xl:h-[110vh]
-                    before:bg-law-library before:absolute before:top-0 before:bottom-0 before:right-0 
-                    before:left-0 before:opacity-85 before:bg-no-repeat before:bg-cover
                     relative bg-main-white w-full phone:pt-[5rem] pt-32"> <!--this the face section-->
-
+            
+        <div class="absolute h-full w-full top-0 right-0 opacity-85"><!--this is the background of the face section-->
+            <img class="h-full w-full object-cover" src="<?php the_field('face_section_background')?>" alt="">
+        </div>
 
         <div class="relative z-10 m-auto xl:w-70% phone:w-90% md:w-90%
                     text-center items-center text-main-white
@@ -116,7 +117,7 @@ get_header();
             لماذا نحن الافضل
         </p>
         <p class="phone:text-[1.5rem] lg:text-[2rem]">
-            حلول قانونية مبتكرة: نقدم حلولًا قانونية إبداعية وفعالة لقضاياك القانونية 
+            <?php the_field("why_us_itro")?>
         </p>
         <div class="mt-10 grid lg:w-[70%] xl:w-auto lg:grid-rows-1 lg:grid-cols-3 phone:grid-rows-3 phone:grid-cols-1"> <!-- here is the three cards -->
             <div class=" bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] phone:rounded-tl-3xl 
@@ -154,12 +155,12 @@ get_header();
                     <h2 class="font-semibold p-[1rem] 
                                 phone:text-[2rem] 
                                 md:pl-[15%]
-                                lg:text-[1.7rem] lg:pl-[10%]">لمحة عن اهم انجازاتنا ببعض الارقام والاحصائيات</h2>
+                                lg:text-[1.7rem] lg:pl-[10%]"><?php the_field("achivements_title")?></h2>
 
                     <p class="px-[1rem]
                                 phone:text-[1.1rem] 
                                 md:pl-[25%] 
-                                lg:text-[1.5rem] lg:pl-[10%]"> نفخر في مكتب الحارثى بتقديم أعلى مستوى من جودة الخدمات القانونية في مختلف المجالات. حيث تخطينا حاجز الألف عملية توثيق وتعاملنا مع العديد من القاضايا المالية التي تجاوزت إجمالي قيمتها المليار ريال سعودي! </p>
+                                lg:text-[1.5rem] lg:pl-[10%]"> <?php the_field("achivements_content")?> </p>
 
                     <div class="relative bg-secondary-gold
                                 phone:bottom-[0] phone:w-[85%] phone:h-[15rem] phone:mt-[8.5rem] phone:right-[50%] phone:rounded-3xl phone:translate-x-[50%]
@@ -168,7 +169,7 @@ get_header();
                                 xl:w-[55%]
                                 "><!--the golden square-->
             
-                                <img class="absolute bottom-0 phone:h-[155%] right-[50%] translate-x-[50%]" src="http://localhost:8080/lawfirm/wp-content/uploads/2024/07/businessman.png" alt="">
+                                <img class="absolute bottom-0 phone:h-[155%] right-[50%] translate-x-[50%]" src="<?php the_field("lawer_photo")?>" alt="">
             
                                 <div class="absolute h-[20vh] bg-main-black bg-opacity-85 w-[55%] right-[8%] bottom-[15%] rounded-3xl
                                             phone:bottom-[0] phone:right-[50%] phone:translate-x-[50%] phone:w-[100%] phone:h-[10vh]
@@ -182,13 +183,13 @@ get_header();
                                                         phone:py-[5px]
                                                         lg:p-[20px]">
 
-                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold">50</li>
+                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold"><?php the_field("qualified_lawers")?></li>
 
-                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold">150</li>
+                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold"><?php the_field("succeeded_issus")?></li>
 
-                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold">100</li>
+                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold"><?php the_field("Q_and_A")?></li>
 
-                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold">250</li>
+                                                <li class="phone:text-[1rem] md:text-[2rem] font-bold"><?php the_field("happy_clients")?></li>
 
                                                 <li class="phone:text-[0.7rem] md:text-[1.1rem] lg:text[1.5rem] px-[5px]">محامون مؤهلون</li>
 
@@ -292,6 +293,28 @@ get_header();
 
     </section>
 
+
+    <!-- ============================================================================================================================================================ -->
+    <section class="wpcf7 relative bg-main-black text-main-gold pt-[6rem] pb-[3rem]
+    ">
+
+        <div class="absolute h-full w-full pb-[3rem] pt-[6rem] px-[10%] top-0 right-0">
+
+            <div class="bg-secondary-black h-full w-full scale-[1.1] rounded-2xl overflow-hidden">
+                <img class="w-[50%] h-full object-cover float-left
+                " src="<?php the_field("contact_us_section_image")?>" alt="">
+            </div>
+
+        </div>
+
+        <div class=" relative w-[80%] m-[auto] border-main-gold border-2 rounded-3xl z-10">
+            
+
+            <?php echo do_shortcode('[contact-form-7 id="242eb1a" title="نموزج التواصل معنا"]');?>
+
+        </div>
+
+    </section>
 
     <!-- ============================================================================================================================================================ -->
 </div>

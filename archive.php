@@ -10,7 +10,9 @@ get_header();
     ?>
 
 
-        <div class="relative p-[1rem] pb-[3rem] bg-secondary-black rounded-xl"><!--this is the singel post card holder-->
+        <div class="relative p-[1rem] pb-[3rem] bg-secondary-black rounded-xl
+                    duration-500 hover:scale-[1.1] hover:z-10
+        "><!--this is the singel post card holder-->
 
                 <div class="h-[15rem]
                 "> 
@@ -23,7 +25,7 @@ get_header();
                 "><p><?php the_excerpt()?></p></div>
                 </div>
                 <div class="h-fit w-fit absolute right-[50%] translate-x-[50%] bottom-0 translate-y-[50%]
-                "><a class="w-fit px-[3rem] py-[1rem] bg-secondary-gold block rounded-2xl" href="<?php the_permalink()?>"> قراءة المزيد ...</a>
+                "><a class="w-fit px-[3rem] py-[1rem] bg-secondary-gold block rounded-2xl text-main-white" href="<?php the_permalink()?>"> قراءة المزيد ...</a>
                 </div>
 
         </div>

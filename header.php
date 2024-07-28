@@ -27,7 +27,7 @@
         </div>
 
 
-        <?php wp_nav_menu() // to add the nav menu ?>
+        <?php wp_nav_menu(array("theme_location"=>"nav_bar")) // to add the nav menu ?>
 
         <div class="sign-button w-fit m-auto">
 
