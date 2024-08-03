@@ -1,10 +1,12 @@
 <?php 
 get_header();
 ?>
-<div class="fron-page-wrapper bg-white overflow-hidden">
-    <section class="
-                    phone:h-fit phone:pb-[100px] lg:pb-[200px] xl:h-[110vh]
-                    relative bg-main-white w-full phone:pt-[5rem] pt-32"> <!--this the face section-->
+<div class="fron-page-wrapper overflow-hidden">
+
+    <section class="relative bg-main-white w-full pt-32
+                    phone:h-fit phone:pb-[100px] phone:pt-[5rem]
+                    lg:pb-[200px] 
+                    "> <!--this the face section-->
             
         <div class="absolute h-full w-full top-0 right-0 opacity-85"><!--this is the background of the face section-->
             <img class="h-full w-full object-cover" src="<?php the_field('face_section_background')?>" alt="">
@@ -22,8 +24,8 @@ get_header();
                         phone:w-[70%]
                         lg:w-30%">
 
-                <a href="#" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-secondary-gold bg-secondary-gold">احجز الان</a>
-                <a href="#" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-main-black bg-main-black">تواصل معنا</a>  
+                <button onclick="showsign()" href="#" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-secondary-gold bg-secondary-gold">احجز الان</button>
+                <a href="#contact_us" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-main-black bg-main-black">تواصل معنا</a>  
 
             </div>
 
@@ -37,7 +39,7 @@ get_header();
     <!-- ============================================================================================================================================================ -->
 
 
-    <section class="h-fit bg-main-black"> <!--this is the who is us section-->
+    <section class="h-fit bg-main-black" id="who_is_us"> <!--this is the who is us section-->
         
         <div class="w-90%  m-auto bg-secondary-black relative -top-20 rounded-xl
                     phone:h-fit 
@@ -112,36 +114,109 @@ get_header();
     <!-- ============================================================================================================================================================ -->
     
     
-    <section  class="h-fit py-[100px] px-[20px] text-main-white bg-main-black text-center flex flex-col justify-center items-center"> <!-- why us is the best section -->
-        <p class="phone:text-[2.5rem] mb-16 font-semibold lg:text-[3rem]">
+    <section  class=" relative h-fit py-[100px] px-[20px] text-main-white bg-main-black text-center flex flex-col justify-center items-center"> <!-- why us is the best section -->
+        <p class="relative phone:text-[2.5rem] mb-16 font-semibold lg:text-[3rem] z-20 bg-main-black text-nowrap px-[1rem] bg-opacity-80
+                before:absolute before:bottom-0 before:h-[3px] before:w-[50%] before:left-[-25%] before:bg-secondary-gold
+        ">
             لماذا نحن الافضل
         </p>
-        <p class="phone:text-[1.5rem] lg:text-[2rem]">
+        <p class="phone:text-[1.5rem] lg:text-[2rem] z-20 bg-main-black px-[1rem] bg-opacity-50">
             <?php the_field("why_us_itro")?>
         </p>
-        <div class="mt-10 grid lg:w-[70%] xl:w-auto lg:grid-rows-1 lg:grid-cols-3 phone:grid-rows-3 phone:grid-cols-1"> <!-- here is the three cards -->
-            <div class=" bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] phone:rounded-tl-3xl 
+        <div class="mt-10 grid 
+                    phone:grid-rows-3 phone:grid-cols-1
+                    lg:grid-rows-1 lg:grid-cols-3 lg:w-[70%] 
+                    xl:w-auto 
+                    "> <!-- here is the three cards -->
+
+            <div class=" bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] z-20 phone:rounded-tl-3xl 
                             phone:rounded-tr-3xl phone:rounded-br-none lg:rounded-tl-none lg:rounded-br-3xl ">
                 <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_1")?></p><!-- card title -->
                 <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_1")?></p><!-- card content -->
             </div>
-            <div class="bg-spicial-2 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] ">
+
+            <div class="bg-spicial-2 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem]  z-20">
                 <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_2")?></p><!-- card title -->
                 <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_2")?></p><!-- card content -->
             </div>
-            <div class="bg-spicial-3 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] 
+
+            <div class="bg-spicial-3 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem]  z-20
                             phone:rounded-br-3xl phone:rounded-bl-3xl lg:rounded-br-none lg:rounded-tl-3xl ">
                 <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_3")?></p><!-- card title -->
                 <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_3")?></p><!-- card content -->
             </div>
+
         </div>
+        <svg class="absolute top-0 right-0 z-10" width="287" height="938" viewBox="0 0 287 938" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_40_1383)">
+            <path d="M165.835 770.373C149.254 757.26 132.92 743.458 116.834 728.967C26.398 647.526 -10.9142 569.045 2.7375 488.985C14.5677 419.634 62.6398 359.733 105.078 306.886C133.396 271.604 160.127 238.314 171.337 207.588C208.649 105.398 193.439 64.0391 184.351 39.3251C179.093 25.0097 175.609 15.5599 186.294 3.32978C196.772 -8.64676 254.909 11.502 369.259 66.735C418.711 90.6223 444.945 124.57 466.023 151.848C476.586 165.516 485.74 177.332 495.721 185.195C523.231 206.846 533.108 209.777 554.74 216.193C572.777 221.556 600.033 229.653 653.213 253.607C699.943 274.657 762.446 320.769 816.33 373.964C846.994 404.22 873.969 435.659 896.503 467.39C921.732 502.916 940.782 538.019 953.11 571.741C975.963 634.197 975.644 690.858 952.04 740.145C928.83 788.699 894.344 829.861 849.529 862.503C805.025 894.929 752.615 917.294 693.755 928.98C608.07 945.991 512.63 938.852 417.716 908.314C367.137 892.045 316.586 869.144 267.491 840.25C232.046 819.315 198.081 795.967 165.835 770.373ZM409.426 94.4078C396.695 84.3468 382.894 75.7216 368.273 68.6888C316.277 43.5709 276.626 26.0523 247.079 15.1185C204.453 -0.634216 191.364 0.793572 187.928 4.78575C178.088 16.0578 181.036 24.0515 186.388 38.6019C195.58 63.5976 210.959 105.426 173.375 208.359C162.042 239.357 135.199 272.844 106.778 308.266C64.5271 360.869 16.6427 420.583 4.90638 489.38C-8.60451 568.632 28.4917 646.484 118.317 727.389C166.37 770.664 216.902 808.021 268.608 838.428C317.582 867.247 367.982 890.091 418.411 906.304C512.95 936.71 608.014 943.878 693.333 926.885C751.883 915.265 804.002 893.022 848.253 860.793C892.766 828.302 926.989 787.441 950.04 739.215C973.334 690.473 973.663 634.385 950.979 572.492C938.716 538.958 919.76 504.024 894.644 468.658C872.176 437.031 845.286 405.723 814.715 375.514C761 322.497 698.741 276.545 652.227 255.598C599.188 231.701 572.007 223.66 554.027 218.278C532.122 211.778 522.104 208.8 494.284 186.895L494.143 186.782C483.975 178.741 474.811 166.887 464.211 153.182C450.146 134.893 433.687 113.598 409.426 94.4078Z" fill="url(#paint0_linear_40_1383)"></path>
+            <path d="M199.152 745.268C185.751 734.665 172.524 723.571 159.473 711.986C77.2061 639.264 41.9098 568.926 51.548 496.992C59.9943 434.465 100.978 379.712 137.175 331.409C162.392 297.761 186.201 265.981 195.361 236.323C225.918 142.261 211.653 102.191 203.122 78.2508C197.979 63.7833 194.573 54.2259 204.774 42.2276C210.405 35.3553 229.587 36.8668 261.721 46.7246C290.626 55.5872 328.897 70.8809 372.386 90.9533C417.912 111.749 442.622 141.651 462.481 165.713C472.081 177.336 480.368 187.372 489.377 194.517C517.907 217.218 526.785 220.56 553.082 230.512C570.763 237.206 594.966 246.359 637.451 265.906C680.987 285.922 739.22 328.996 789.419 378.313C818.137 406.478 843.372 435.733 864.432 465.146C888.063 498.156 905.875 530.706 917.381 561.913C938.131 618.196 938.206 669.316 917.606 713.845C896.781 758.581 865.596 796.622 824.931 826.919C784.511 857.027 736.817 877.945 683.221 889.079C605.702 905.171 519.231 899.407 433.144 872.481C387.243 858.116 341.313 837.744 296.651 811.879C262.592 792.05 230.008 769.789 199.152 745.268ZM414.205 118.734C401.124 108.383 386.832 99.6624 371.645 92.7653C279.674 50.3204 216.364 31.4403 206.472 43.495C197.013 54.6108 200.091 63.2106 205.177 77.5279C213.736 101.741 228.151 142.195 197.416 236.933C188.116 266.911 164.203 298.831 138.883 332.62C102.836 380.726 61.9276 435.254 53.6408 497.255C44.0308 568.485 79.1018 638.231 160.815 710.465C204.652 749.38 250.703 782.887 297.683 810.076C342.224 835.847 388.012 856.173 433.763 870.5C519.522 897.351 605.646 903.068 682.827 887.051C736.179 875.973 783.601 855.131 823.777 825.248C864.132 795.205 895.102 757.37 915.823 712.953C936.188 668.931 936.085 618.337 915.532 562.579C900.338 521.402 865.905 456.181 788.068 379.731C737.981 330.564 680.011 287.631 636.682 267.727C594.253 248.199 570.049 239.055 552.443 232.38C526.635 222.616 516.969 218.945 488.186 196.075C479.007 188.799 470.655 178.688 460.97 166.971C448.591 151.959 434.289 134.6 414.205 118.734Z" fill="url(#paint1_linear_40_1383)"></path>
+            <path d="M232.059 721.514C221.708 713.334 211.442 704.807 201.26 695.932C127.047 631.843 93.8074 569.575 99.6554 505.598C104.762 449.835 138.855 400.231 168.941 356.475C190.916 324.501 211.67 294.3 218.767 265.677C242.685 179.78 229.318 141.047 221.386 117.888C216.298 103.158 212.937 93.4234 222.691 81.6137C235.476 65.0727 310.646 87.6781 375.069 115.691C416.963 133.462 440.243 159.503 458.951 180.466C467.399 189.957 474.768 198.152 482.653 204.461C514.935 230.417 522.079 233.619 561.739 251.446C576.664 258.158 595.25 266.513 621.421 278.848C648.183 291.447 681.498 313.583 715.159 341.135C753.064 372.115 788.115 407.347 816.539 442.916C850.153 485.001 873.471 526.091 885.843 565.031C900.242 610.392 899.332 651.904 883.111 688.404C864.656 729.353 836.758 764.293 800.196 792.278C763.774 820.084 720.773 839.554 672.289 850.125C602.872 865.305 525.308 860.949 447.94 837.545C373.53 815.062 301.053 776.075 232.059 721.514ZM419.066 143.985C405.399 133.16 390.327 124.239 374.262 117.465C297.542 84.1108 234.396 69.5412 224.136 82.8341C215.049 93.8458 218.091 102.67 223.132 117.287C231.195 140.643 244.675 179.724 220.607 266.156C213.435 295.089 192.586 325.421 170.508 357.545C140.554 401.113 106.611 450.483 101.561 505.757C95.7598 569.096 128.783 630.829 202.509 694.496C280.42 762.416 363.176 809.964 448.503 835.752C525.542 859.062 602.788 863.399 671.913 848.294C720.106 837.761 762.864 818.394 799.004 790.757C835.312 762.97 863.014 728.273 881.337 687.615C897.351 651.557 898.233 610.505 883.984 565.576C871.687 526.861 848.482 485.978 815.009 444.071C786.688 408.614 751.74 373.513 713.939 342.581C680.371 315.122 647.216 293.08 620.586 280.538C594.433 268.212 575.857 259.885 560.931 253.154C521.093 235.243 513.921 232.013 481.442 205.916C473.435 199.513 466.057 191.262 457.515 181.705C446.973 169.97 435.005 156.574 419.066 143.985Z" fill="url(#paint2_linear_40_1383)"></path>
+            <path d="M264.557 697.153C257.415 691.52 250.314 685.689 243.254 679.66C177.035 624.083 145.912 569.801 148.109 513.744C149.986 464.711 176.125 422.185 201.352 381.048C219.895 350.832 237.405 322.287 242.287 294.71C259.694 217.094 247.676 181.225 239.724 157.488C234.475 141.836 231.274 132.38 240.663 120.69C251.929 105.234 312.139 113.76 377.738 140.127C416.476 154.972 438.521 177.385 456.237 195.385C463.016 202.277 469.382 208.784 475.954 214.052L479.24 216.728C517.048 247.555 520.137 250.071 605.387 291.451C629.356 303.067 660.442 323.837 690.665 348.419C725.403 376.71 757.653 408.626 783.838 440.72C814.953 478.852 836.763 516.026 848.621 551.19C862.488 592.214 862.46 629.754 848.536 662.759C832.463 699.933 807.855 731.801 775.398 757.473C743.101 783.022 704.767 801.07 661.466 811.135C600.157 825.389 531.488 822.403 462.885 802.544C394.675 782.778 328.053 747.37 264.557 697.153ZM425.574 169.376C410.933 157.735 394.582 148.427 377.1 141.779C313.256 116.126 252.652 107.15 242.033 121.76C233.293 132.728 236.344 141.836 241.404 156.925C248.915 179.394 261.534 217.019 244.033 295.057C239.095 322.935 221.5 351.611 202.873 381.978C177.749 422.917 151.78 465.246 149.874 513.81C147.705 569.322 178.622 623.097 244.399 678.308C314.092 737.698 387.737 778.919 463.373 800.835C531.685 820.628 600.045 823.595 661.053 809.408C704.1 799.407 742.199 781.464 774.281 756.083C806.512 730.59 830.942 698.956 846.893 662.055C860.648 629.472 860.657 592.364 846.893 551.763C835.073 516.796 813.375 479.809 782.393 441.837C756.283 409.837 724.182 377.987 689.444 349.818C659.325 325.311 628.361 304.625 604.514 293.067C519.076 251.592 515.969 249.066 478.019 218.127L474.733 215.451C468.161 210.118 461.702 203.573 454.885 196.672C446.595 188.099 437.235 178.596 425.574 169.376Z" fill="url(#paint3_linear_40_1383)"></path>
+            <path d="M297.273 673.704C293.363 670.609 289.468 667.455 285.59 664.241C154.786 558.474 197.234 477.526 234.672 406.107C249.542 377.746 263.585 350.963 266.123 324.435C277.205 255.261 265.954 220.867 258.51 198.107C253.18 181.812 249.965 171.973 258.904 160.32C264.149 152.643 279.903 148.527 302.076 149.043C325.575 149.617 353.604 155.311 380.882 165.085C417.606 177.217 437.965 195.739 455.927 212.071C460.693 216.403 465.195 220.529 469.763 224.231C476.606 229.87 482.462 234.944 487.623 239.417C511.488 260.044 525.897 272.486 589.983 304.7C630.89 325.196 699.017 376.045 751.937 439.232C780.577 473.438 800.889 506.705 812.3 538.111C825.648 574.816 826.512 608.393 814.866 637.919C801.199 671.31 779.399 700.755 751.448 723.576C723.193 746.881 689.496 763.533 651.315 773.081C598.057 786.397 538.239 784.78 478.364 768.382C416.215 751.486 355.371 719.638 297.273 673.704ZM434.929 196.086C418.665 183.06 400.171 173.094 380.346 166.673C321.712 145.67 270.015 146.985 260.211 161.288C251.751 172.292 254.9 181.812 260.06 197.599C267.58 220.51 278.86 255.13 267.74 324.641C265.174 351.433 251.056 378.356 236.111 406.868C217.142 443.038 197.573 480.449 198.616 522.389C199.847 570.108 228.629 616.089 286.614 662.972C348.03 713.868 412.699 748.826 478.759 766.869C538.399 783.164 597.926 784.724 650.901 771.521C688.847 762.039 722.338 745.49 750.395 722.345C778.149 699.702 799.798 670.479 813.372 637.337C828.308 599.456 829.577 534.511 750.696 440.332C697.927 377.313 630.034 326.624 589.278 306.204C525.004 273.905 510.539 261.407 486.579 240.695C481.419 236.232 475.563 231.185 468.72 225.537C464.124 221.779 459.603 217.663 454.828 213.321C448.652 207.711 442.204 201.856 434.91 196.086H434.929Z" fill="url(#paint4_linear_40_1383)"></path>
+            <path d="M324.001 644.4C276.278 606.628 250.962 569.11 246.683 529.798C242.789 494.102 256.245 461.469 269.259 429.925C280.106 403.623 290.353 378.824 290.381 353.443C295.401 293.126 284.892 260.446 277.93 238.841C272.384 221.594 269.034 211.177 277.62 199.454C288.242 182.911 336.059 175.152 384.111 189.59C422.198 199.463 442.053 216.033 461.251 232.059L463.428 233.881C472.652 241.659 479.952 248.685 487.017 255.486C505.962 273.71 523.856 290.928 574.113 317.334C610.764 336.515 671.775 382.149 719.104 436.97C758.992 483.177 801.949 551.065 780.095 612.039C757.575 671.397 706.671 715.819 640.5 733.939C595.46 746.282 544.631 746.01 493.576 733.15C437.765 719.06 382.797 690.879 330.157 649.181C329.538 648.683 328.918 648.185 328.28 647.697L324.001 644.4ZM448.649 223.727C432.622 211.036 413.931 198.927 383.698 191.084C332.334 175.641 287.988 186.077 278.858 200.346C270.704 211.487 273.97 221.622 279.365 238.418C286.365 260.145 296.931 292.995 291.892 353.546C291.892 379.162 281.57 404.121 270.657 430.573C257.718 461.939 244.328 494.365 248.184 529.704C252.548 569.692 279.037 607.896 329.2 646.569L331.076 648.054C383.557 689.592 438.328 717.735 493.942 731.751C544.734 744.545 595.282 744.826 640.097 732.549C672.844 723.578 701.613 708.436 725.588 687.535C749.31 667.028 767.554 640.926 778.669 611.588C800.251 551.309 757.604 483.929 717.978 438.022C670.78 383.333 609.967 337.849 573.475 318.724C523.031 292.225 505.061 274.931 486.042 256.632C478.995 249.85 471.704 242.833 462.527 235.093L460.35 233.28C456.475 230.086 452.646 226.883 448.649 223.727Z" fill="url(#paint5_linear_40_1383)"></path>
+            </g>
+            <defs>
+            <linearGradient id="paint0_linear_40_1383" x1="484.97" y1="0.00453078" x2="484.97" y2="938.007" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <linearGradient id="paint1_linear_40_1383" x1="491.545" y1="37.9652" x2="491.545" y2="897.97" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <linearGradient id="paint2_linear_40_1383" x1="497.466" y1="76.028" x2="497.466" y2="859.034" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <linearGradient id="paint3_linear_40_1383" x1="503.5" y1="113" x2="503.5" y2="820.009" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <linearGradient id="paint4_linear_40_1383" x1="509.984" y1="149.025" x2="509.984" y2="782.046" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <linearGradient id="paint5_linear_40_1383" x1="515.984" y1="182.038" x2="515.984" y2="743.042" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9CBA3"></stop>
+            <stop offset="0.15" stop-color="#EEDEBC"></stop>
+            <stop offset="0.39" stop-color="#C9A885"></stop>
+            <stop offset="0.63" stop-color="#9A7A5F"></stop>
+            <stop offset="0.86" stop-color="#C9A885"></stop>
+            <stop offset="1" stop-color="#C9A885"></stop>
+            </linearGradient>
+            <clipPath id="clip0_40_1383">
+            <rect width="287" height="938" fill="white"></rect>
+            </clipPath>
+            </defs>
+        </svg>
     </section>
     
     
     <!-- ============================================================================================================================================================ -->
     
     
-    <section class="relative h-fit w-screen bg-main-black flex items-center py-[5%] 
+    <section class="relative h-fit w-full bg-main-black flex items-center py-[5%] 
                     phone:items-end phone:justify-center 
                     md:justify-start
                      "><!--this is the section with the photo and statistcs-->
@@ -153,14 +228,16 @@ get_header();
                     "><!--this is the white square-->
 
                     <h2 class="font-semibold p-[1rem] 
-                                phone:text-[2rem] 
+                                phone:text-[2rem]
                                 md:pl-[15%]
                                 lg:text-[1.7rem] lg:pl-[10%]"><?php the_field("achivements_title")?></h2>
 
-                    <p class="px-[1rem]
-                                phone:text-[1.1rem] 
-                                md:pl-[25%] 
-                                lg:text-[1.5rem] lg:pl-[10%]"> <?php the_field("achivements_content")?> </p>
+                    <p class="absolute
+                                phone:text-[1.1rem] phone:static phone:px-[1rem]
+                                md:absolute md:right-[3rem] md:w-[50%] md:text-[1.3rem]
+                                lg:text-[1.5rem] lg:right-[5rem]
+                                lx:right-[5rem] lx:w-[65%]
+                                "> <?php the_field("achivements_content")?> </p>
 
                     <div class="relative bg-secondary-gold
                                 phone:bottom-[0] phone:w-[85%] phone:h-[15rem] phone:mt-[8.5rem] phone:right-[50%] phone:rounded-3xl phone:translate-x-[50%]
@@ -211,7 +288,7 @@ get_header();
     <!-- ============================================================================================================================================================ -->
     
 
-    <section class="w-full h-fit py-[2rem] bg-main-black">
+    <section class="w-full h-fit py-[2rem] bg-main-black" id="our_services">
         <h1 class="text-center text-main-white
                     phone:text-[2.5rem] phone:mb-[2rem]
                     lg:text-[4rem] lg:mb-[5rem]
@@ -295,22 +372,27 @@ get_header();
 
 
     <!-- ============================================================================================================================================================ -->
-    <section class="wpcf7 relative bg-main-black text-main-gold pt-[6rem] pb-[3rem]
-    ">
+    <section class="wpcf7 relative bg-main-black text-main-gold pt-[6rem] pb-[3rem] mb-[3rem]
+    " id="contact_us">
 
-        <div class="absolute h-full w-full pb-[3rem] pt-[6rem] px-[10%] top-0 right-0">
+        <div class="absolute h-full w-full pb-[3rem] pt-[6rem] px-[10%] top-0 right-0 ">
 
             <div class="bg-secondary-black h-full w-full scale-[1.1] rounded-2xl overflow-hidden">
-                <img class="w-[50%] h-full object-cover float-left
+                <img class="w-[45%] h-full object-cover float-left 
+                            phone:hidden xl:block
                 " src="<?php the_field("contact_us_section_image")?>" alt="">
             </div>
 
         </div>
 
-        <div class=" relative w-[80%] m-[auto] border-main-gold border-2 rounded-3xl z-10">
+        <div class="main-contact-us-form relative w-[80%] m-[auto] border-main-gold border-2 rounded-3xl z-10 pt-[3rem]">
             
+            <h1 class="contact-us-form absolute px-[2rem] bg-secondary-black
+                        phone:-top-[2rem] phone:right-[2rem] phone:text-[2rem]
+                        xl:right-[3rem] xl:text-[3rem]
+            ">تواصل معنا</h1>
 
-            <?php echo do_shortcode('[contact-form-7 id="242eb1a" title="نموزج التواصل معنا"]');?>
+            <?php echo do_shortcode('[formidable id=1]');?>
 
         </div>
 

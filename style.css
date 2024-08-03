@@ -4,11 +4,11 @@ Author: Eslam Hamdallah
 Description: there is no description yet 
 version: 1.0.0*/
 
-/* ================================================= apply the following classes ================================================ */
-
-/* ================================================= apply the following classes ================================================ */
 * {
   font-family: "IBM-Plex-Sans";
+}
+.appear {
+  display: block;
 }
 /* 
 =
@@ -139,7 +139,7 @@ a.services-icons:hover svg {
 =
 */
 /* ===================================================== this hard code for contact us form =================================================== */
-div.wpcf7 {
+/* div.wpcf7 {
   width: 90%;
   display: flex;
   justify-content: flex-end;
@@ -201,8 +201,185 @@ form.wpcf7-form textarea {
   border: 1px solid #be8d25;
   border-radius: 10px;
   width: 100%;
+} */
+/* ===================================================== this hard code for contact us form =================================================== */
+.main-contact-us-form .frm-show-form {
+  width: 50%;
+}
+.main-contact-us-form .frm_error_style,
+.main-contact-us-form .frm_message {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 3rem;
+  width: 95%;
+}
+.sign-form .frm_fields_container {
+  margin: auto;
+}
+.sign-form.frm-show-form {
+  width: 50%;
+}
+.sign-form .frm_error_style,
+.sign-form .frm_message {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 3rem;
+  width: 50%;
+  margin: auto;
+}
+
+.frm_fields_container {
+  width: 30rem;
+  margin: 0 4rem;
+}
+.frm_form_field {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin: 0.7rem auto;
+  width: 100%;
+  font-size: 1.4rem;
+  position: relative;
+}
+select {
+  background: transparent;
+  border: 1px solid;
+  margin: auto;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+}
+.frm_form_field label {
+  position: absolute;
+  margin: 0 0 0.5rem 0;
+  background: #232323;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+  font-size: 1.6rem;
+}
+.frm_form_field label.active {
+  top: -1rem;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+.frm_form_field input,
+.frm_form_field textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.frm_submit {
+  font-size: 1.4rem;
+  margin: auto;
+  border-radius: 1rem;
+  border: 2px solid #be8d25;
+  transition: 0.3s;
+}
+.frm_submit:hover {
+  color: #232323;
+  background-color: #be8d25;
+}
+.frm_submit button {
+  padding: 1rem 5rem;
+}
+.frm_error {
+  color: rgb(201, 35, 35);
+}
+@media (max-width: 1279px) {
+  .main-contact-us-form .frm-show-form {
+    width: fit-content;
+    margin: auto;
+  }
+  .frm_fields_container {
+    width: 90%;
+    margin: auto;
+  }
+  .frm_form_field {
+    font-size: 1.1rem;
+  }
+  .frm_submit {
+    font-size: 1.4rem;
+  }
+  .frm_form_field label.active {
+    font-size: 0.8rem;
+  }
+  .frm_form_field label {
+    font-size: 1.2rem;
+  }
+  .sign-form .frm_error_style,
+  .sign-form .frm_message {
+    font-size: 1.5rem;
+  }
 }
 /* ===================================================== this hard code for contact us form =================================================== */
+/* 
+=
+=
+=
+=
+=
+=
+=
+=
+*/
+/* ===================================================== this is single post style =================================================== */
+.edit-post-content h1 {
+  font-size: 2em;
+}
+.edit-post-content h2 {
+  font-size: 1.5em;
+}
+.edit-post-content h3 {
+  font-size: 1.17em;
+}
+.edit-post-content h4 {
+  font-size: 1em;
+}
+.edit-post-content h5 {
+  font-size: 0.83em;
+}
+.edit-post-content h6 {
+  font-size: 0.67em;
+}
+.text-wrap-tar pre * {
+  text-wrap: wrap;
+}
+.pagination a {
+  padding: 1rem 2rem;
+  border: 1px solid #be8d25;
+  color: #be8d25;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.pagination a:hover {
+  background-color: #be8d25;
+  color: #171717;
+}
+ul.post-categories {
+  display: flex;
+}
+ul.post-categories li {
+  border: 1px solid #be8d25;
+  color: #be8d25;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  transition: 0.3s;
+  margin: 3rem 0;
+}
+ul.post-categories li:hover {
+  border: 1px solid #be8d25;
+  background-color: #be8d25;
+  color: #303030;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+/* ===================================================== this is single post values =================================================== */
 /* 
 =
 =

@@ -7,7 +7,7 @@
     <link rel="pingback" href="<?php bloginfo("pingback_url")?>">
     <?php wp_head()?>
 </head>
-<body dir="rtl" class="relative">
+<body dir="rtl" class="relative bg-main-black">
 
     <div class="resposiveNavMenu hidden xl:hidden
                 fixed
@@ -129,8 +129,8 @@
 
             <div class="sign-button xl:block hidden">
 
-                <a class="text-main-gold border border-main-gold rounded-xl px-10 py-3 duration-300
-                          hover:text-main-white hover:bg-main-gold text-nowrap " href="#">احجز الان</a>
+                <button onclick="showsign()" class="text-main-gold border border-main-gold rounded-xl px-10 py-3 duration-300
+                          hover:text-main-white hover:bg-main-gold text-nowrap " href="#">احجز الان</button>
 
             </div>
 
@@ -152,6 +152,18 @@
             <p> العنوان: شارع التخصصي، العليا، الرياض 12313 </p>
 
         </div>
-
-
+        
     </header>
+    <div class=" the-disappeard-sign hidden absolute right-0 top-0 h-full w-full z-[9999] backdrop-blur-sm"> <!-- this div for the hiddem sign form -->
+
+        <div class="hide-trigger absolute top-0 right-0 h-full w-full bg-main-black opacity-60 "></div>
+
+
+        <div class="sign-form sticky bg-secondary-black h-fit text-main-gold border-main-gold rounded-3xl
+
+                    phone:w-full
+                    md:w-[50%] md:translate-x-[50%] md:right-[50%] 
+                    "> <!--this what will hold the form-->
+            <?php echo do_shortcode("[formidable id=2]") ;?>
+        </div>
+    </div>
