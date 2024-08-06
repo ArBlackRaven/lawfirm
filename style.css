@@ -360,6 +360,7 @@ select {
 }
 ul.post-categories {
   display: flex;
+  gap: 0.5rem;
 }
 ul.post-categories li {
   border: 1px solid #be8d25;

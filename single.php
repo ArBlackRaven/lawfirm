@@ -35,12 +35,17 @@ if(have_posts()){
          <pre>
              <?php the_content()?>
          </pre>
-         <div> <!--tags holder-->
+         <div class="w-full relative
+                    after:absolute after:w-full after:right-0 after:bg-main-white after:h-[1px] after:bottom-[1rem] after:opacity-60 
+         "> <!--tags holder-->
             <?php the_category()?>
          </div>
 
-         <div class="px-[5%] grid grid-cols-2"> <!--this is the navigation menu-->
-            <div class="pagination w-full h-full flex justify-center">
+         <div class="px-[5%] grid gap-[2rem]
+                     phone:grid-rows-2
+                     md:grid-cols-2 grid-rows-1
+         "> <!--this is the navigation menu-->
+            <div class="pagination w-full h-full flex justify-center items-center">
                 <?php // this code to show the pagination buttons with css style 
                 if(get_previous_post_link()){
                     previous_post_link('%link',"%title");
@@ -49,7 +54,7 @@ if(have_posts()){
                 }
                 ?>
             </div>
-            <div class="pagination w-full h-full flex justify-center">
+            <div class="pagination w-full h-full flex justify-center items-center">
                 <?php
                     if(get_next_post_link()){
                         next_post_link('%link',"%title");
