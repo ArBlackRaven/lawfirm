@@ -1,6 +1,7 @@
 //open and close the sidebar menu
 const sidebarTrigger = document.querySelector(".sidebarTrigger");
 const sidebar = document.querySelector(".resposiveNavMenu");
+const sidebarbuttons = document.querySelectorAll(".resposiveNavMenu ul li a");
 const sidebarExitor = document.querySelector(".Exitor");
 
 sidebarTrigger.addEventListener("click", () => {
@@ -15,6 +16,12 @@ function openSideMenu() {
 function closeSideMenu() {
   sidebar.classList.add("hidden");
 }
+sidebarbuttons.forEach((element) => {
+  element.addEventListener("click", () => {
+    closeSideMenu();
+    console.log(element);
+  });
+});
 //
 //
 //

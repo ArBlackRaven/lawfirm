@@ -31,8 +31,8 @@
 
         <div class="sign-button w-fit m-auto">
 
-            <a class="text-main-gold border border-main-gold rounded-xl px-10 py-3 duration-300
-                      hover:text-main-white hover:bg-main-gold text-nowrap text-4xl" href="#">احجز الان</a>
+            <bottom onclick="closeSideMenu();showsign()" class="text-main-gold border border-main-gold rounded-xl px-10 py-3 duration-300
+                      hover:text-main-white hover:bg-main-gold text-nowrap text-4xl" href="#">احجز الان</bottom>
 
         </div>
 
@@ -147,20 +147,20 @@
                     translate-y-100% text-main-gold 
                     bg-opacity-70 backdrop-blur-md" > <!--this is for the informations bar (absolute)-->
 
-            <p> الرياض 0555559177 </p>
+            <p> الرياض  541244411 </p>
 
             <p> العنوان: شارع التخصصي، العليا، الرياض 12313 </p>
 
         </div>
         
     </header>
-    <div class=" the-disappeard-sign hidden absolute right-0 top-0 h-full w-full z-[9999] backdrop-blur-sm"> <!-- this div for the hiddem sign form -->
+    <div class=" the-disappeard-sign hidden absolute right-0 top-0 h-full w-full z-[9999] backdrop-blur-sm pt-[5rem]"> <!-- this div for the hiddem sign form -->
 
         <div class="hide-trigger absolute top-0 right-0 h-full w-full bg-main-black opacity-60 "></div>
 
 
-        <div class="sign-form sticky bg-secondary-black h-fit text-main-gold border-main-gold rounded-3xl
-
+        <div class="sign-form sticky bg-secondary-black h-fit text-main-gold border-main-gold 
+                    rounded-3xl py-[2.5rem] top-[6rem]
                     phone:w-full
                     md:w-[50%] md:translate-x-[50%] md:right-[50%] 
                     "> <!--this what will hold the form-->

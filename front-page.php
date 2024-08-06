@@ -3,6 +3,10 @@ get_header();
 ?>
 <div class="fron-page-wrapper overflow-hidden">
 
+
+    <a href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <img src="http://localhost:8080/lawfirm/wp-content/uploads/2024/08/social.png" alt=""></a>
+    <!--this is whtwsapp code-->
+
     <section class="relative bg-main-white w-full pt-32
                     phone:h-fit phone:pb-[100px] phone:pt-[5rem]
                     lg:pb-[200px] 
@@ -24,8 +28,14 @@ get_header();
                         phone:w-[70%]
                         lg:w-30%">
 
-                <button onclick="showsign()" href="#" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-secondary-gold bg-secondary-gold">احجز الان</button>
-                <a href="#contact_us" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 border-main-black bg-main-black">تواصل معنا</a>  
+                <button onclick="showsign()" href="#" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4
+                                                            border-secondary-gold bg-secondary-gold duration-300
+                                                            hover:text-secondary-gold hover:bg-main-black hover:rounded-3xl hover:scale-[1.1]
+                                            ">احجز الان</button>
+                <a href="#contact_us" class="col-span-3 lg:text-[1.5rem] m-1 py-3 px-5 rounded-lg border-4 
+                                            border-main-black bg-main-black mt-[1rem] duration-300
+                                            hover:bg-secondary-gold hover:scale-[1.1] hover:rounded-3xl
+                                            ">تواصل معنا</a>  
 
             </div>
 
@@ -54,7 +64,7 @@ get_header();
 
                     <h1 class="phone:text-[1.8rem] lg:text-[2.5rem] text-main-gold font-medium"><?php the_field("who_is_us_golden_txt")?></h1>
 
-                    <img class="lg:hidden phone:block phone:w-[50%] phone:h-[50%] phone:m-auto" src="<?php the_field("who_is_us_main_image")?>" alt="">
+                    <img class="lg:hidden phone:block phone:w-[90%] phone:h-[50%] phone:m-auto" src="<?php the_field("who_is_us_main_image")?>" alt="">
 
                     <h1 class="phone:text-[1.1rem] lg:text-[1.2rem] py-5 tracking-wider"><?php the_field("who_is_us_main_content")?></h1>
 
@@ -74,7 +84,11 @@ get_header();
                         phone:py-[50px] phone:px-20px"><!-- three feachers wrapper  -->
 
 
-                <div class="lg:px-0 md:px-[12rem] phone:p-0 phone:m-[20px] flex flex-col justify-start items-center px-16"> <!--  feacher one  -->
+                <div class="flex flex-col justify-start items-center px-16
+                            phone:p-0 phone:m-[20px] phone:mt-[3rem]
+                            md:px-[12rem]
+                            lg:px-0
+                "> <!--  feacher one  -->
                     <div>
                         <img class="m-auto object-contain h-32 w-32" src="<?php the_field("feacher_1_image")?>" alt="">
                     </div>
@@ -84,7 +98,11 @@ get_header();
                     </div>
                 </div>
 
-                <div class="lg:px-0 md:px-[12rem] phone:p-0 phone:m-[20px] flex flex-col justify-start items-center px-16"> <!--  feacher two  -->
+                <div class="flex flex-col justify-start items-center px-16
+                            phone:p-0 phone:m-[20px] phone:mt-[3rem]
+                            md:px-[12rem]
+                            lg:px-0
+                "> <!--  feacher two  -->
                     <div>
                         <img class="m-auto object-contain h-32 w-32" src="<?php the_field("feacher_2_image")?>" alt="">
                     </div>
@@ -94,7 +112,11 @@ get_header();
                     </div>
                 </div>
 
-                <div class="lg:px-0 md:px-[12rem] phone:p-0 phone:m-[20px] flex flex-col justify-start items-center px-16"> <!--  feacher three  -->
+                <div class="flex flex-col justify-start items-center px-16
+                            phone:p-0 phone:m-[20px] phone:mt-[3rem]
+                            md:px-[12rem]
+                            lg:px-0
+                "> <!--  feacher three  -->
                     <div>
                         <img class="m-auto object-contain h-32 w-32" src="<?php the_field("feacher_3_image")?>" alt="">
                     </div>
@@ -129,21 +151,58 @@ get_header();
                     xl:w-auto 
                     "> <!-- here is the three cards -->
 
-            <div class=" bg-spicial-1 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem] z-20 phone:rounded-tl-3xl 
-                            phone:rounded-tr-3xl phone:rounded-br-none lg:rounded-tl-none lg:rounded-br-3xl ">
-                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_1")?></p><!-- card title -->
-                <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_1")?></p><!-- card content -->
+            <div class=" bg-spicial-1 px-[1rem] py-[5rem] z-20 
+                            phone:rounded-tr-3xl phone:rounded-br-none phone:w-full phone:rounded-tl-3xl
+                            lg:rounded-tl-none lg:rounded-br-3xl lg:-w-[30vw]
+                            xl:w-20vw
+                            ">
+
+                <p class="pb-12 relative
+                          after:absolute after:bottom-[2rem] after:right-[50%] after:translate-x-[50%] after:bg-main-gold after:w-[5rem] after:h-[2px]
+                          phone:text-[1.7rem]
+                          lg:text-[1.7rem]
+                "><?php the_field("why_us_title_1")?></p><!-- card title -->
+
+                <p class="phone:text-[1.2rem]
+                          lg:text-[1.2rem]
+                "><?php the_field("why_us_content_1")?></p><!-- card content -->
+
             </div>
 
-            <div class="bg-spicial-2 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem]  z-20">
-                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_2")?></p><!-- card title -->
-                <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_2")?></p><!-- card content -->
+            <div class="bg-spicial-2 px-[1rem] py-[5rem]  z-20
+                        phone:w-full 
+                        lg:-w-[30vw] 
+                        xl:w-20vw 
+                        ">
+
+                <p class="pb-12 relative
+                          after:absolute after:bottom-[2rem] after:right-[50%] after:translate-x-[50%] after:bg-main-gold after:w-[5rem] after:h-[2px]
+                          phone:text-[1.7rem]
+                          lg:text-[1.7rem]
+                "><?php the_field("why_us_title_2")?></p><!-- card title -->
+
+                <p class="phone:text-[1.2rem]
+                          lg:text-[1.2rem]
+                "><?php the_field("why_us_content_2")?></p><!-- card content -->
+
             </div>
 
-            <div class="bg-spicial-3 phone:w-full lg:-w-[30vw] xl:w-20vw px-[1rem] py-[5rem]  z-20
-                            phone:rounded-br-3xl phone:rounded-bl-3xl lg:rounded-br-none lg:rounded-tl-3xl ">
-                <p class="phone:text-[1.7rem] lg:text-[1.7rem] pb-12"><?php the_field("why_us_title_3")?></p><!-- card title -->
-                <p class="phone:text-[1.2rem] lg:text-[1.2rem]"><?php the_field("why_us_content_3")?></p><!-- card content -->
+            <div class="bg-spicial-3  px-[1rem] py-[5rem]  z-20
+                            phone:rounded-br-3xl phone:rounded-bl-3xl phone:w-full
+                            lg:-w-[30vw] lg:rounded-br-none lg:rounded-tl-3xl
+                            xl:w-20vw
+                            ">
+
+                <p class="pb-12 relative
+                          after:absolute after:bottom-[2rem] after:right-[50%] after:translate-x-[50%] after:bg-main-gold after:w-[5rem] after:h-[2px]
+                          phone:text-[1.7rem]
+                          lg:text-[1.7rem]
+                "><?php the_field("why_us_title_3")?></p><!-- card title -->
+
+                <p class="phone:text-[1.2rem]
+                          lg:text-[1.2rem]
+                "><?php the_field("why_us_content_3")?></p><!-- card content -->
+
             </div>
 
         </div>
@@ -289,16 +348,19 @@ get_header();
     
 
     <section class="w-full h-fit py-[2rem] bg-main-black" id="our_services">
+
         <h1 class="text-center text-main-white
                     phone:text-[2.5rem] phone:mb-[2rem]
                     lg:text-[4rem] lg:mb-[5rem]
                     "><!--the title of the section-->
             خدماتنا
         </h1>
+
         <div class="w-[90%] grid m-auto gap-[2rem]
         phone:grid-rows-2
         lg:grid-cols-2 lg:grid-rows-1
         "> <!--the holder of two services-->
+
             <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-fit duration-300
                         hover:bg-secondary-gold hover:text-spicial-3 hover:border-spicial-3
                         phone:p-[1rem] phone:pl-[5rem] 
@@ -313,6 +375,7 @@ get_header();
                             phone:text-[0.8rem]
                             lg:text-[1.2rem]
                             "> يعمل مكتبنا ع اداره القضايا الاداريه والترافع بها ويشمل ذلك كافه القضايا الناشئه عن عقود الخدمات والمقاولات والتوريد وكافه المنازعات التجاريه الاخرى </p><!--this is the description of the service-->
+                            
                 <div class="absolute h-[75%] left-0 bottom-[50%] translate-y-[50%]
                             phone:w-[5rem]
                             lg:w-[8rem]
@@ -329,6 +392,7 @@ get_header();
                         </defs>
                     </svg>
                 </div>
+
             </a>
             <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-fit duration-300
                         hover:bg-secondary-gold hover:text-spicial-3 hover:border-spicial-3

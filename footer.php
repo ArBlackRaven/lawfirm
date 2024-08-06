@@ -1,4 +1,27 @@
-        <footer class="relative bg-secondary-black ">
+        <footer class="relative bg-secondary-black pt-[3rem]">
+            <div class="footersubform flex justify-center 
+                        phone:flex-col phone:items-center phone:gap-0
+                        md:flex-row md:gap-[2rem]
+            ">
+                <div class="text-center
+                            phone:w-[90%]
+                            md:w-[40%]
+                "> <!--this for the message of the form-->
+                    <h1 class="text-[3rem] text-main-gold">اشترك ليصلك كل جديد</h1>
+                    <p class="text-[1.5rem] text-main-white">
+                        ما هذا الا مجرد نص تجريبي صغير من اجل تغييره فيما بعد بما يتناسب مع هذا المكان بدون رووت احبابي فالله
+                    </p>
+                </div>
+                <div class="text-[6rem] text-main-gold flex items-center">
+                    <span class="phone:hidden md:inline">
+                        <?php echo do_shortcode('[icon name="chevron-left" prefix="fas"]')?>
+                    </span>
+                    <span class="phone:inline md:hidden">
+                        <?php echo do_shortcode('[icon name="chevron-down" prefix="fas"]')?>
+                    </span>
+                </div>
+                <?php echo do_shortcode("[formidable id=3]")?>
+            </div>
             <div class="px-[5%]
                         phone:flex phone:flex-col
                         lg:grid-cols-4 lg:grid lg:gap-[3rem]
@@ -33,7 +56,7 @@
                         before:right-[50%] before:translate-x-[50%] before:-top-[10%] before:opacity-40
             ">
             <p class="opacity-40 ">
-                حقوق الطبع والنشر © 2024 التصميم والتحميل بواسطة شركة حمادة هلال الدولية 
+                حقوق الطبع والنشر © 2024 التصميم والتحميل بواسطة <a class="text-blue-500 text-[1.2rem]" href="#">softDomi</a> 
             </p>
             </div>
             <svg class="absolute bottom-0 left-0 scale-x-[-1]" width="287" height="348" viewBox="0 0 287 348" fill="none" xmlns="http://www.w3.org/2000/svg">
