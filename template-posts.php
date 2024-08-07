@@ -1,4 +1,11 @@
 <?php
+/*
+Template Name: Posts
+*/
+?>
+
+
+<?php
 get_header();
 ?>
 <div class="mt-[3rem] bg-main-black"> <!--location holder-->
@@ -9,11 +16,21 @@ get_header();
             md:grid-cols-2
             lg:grid-cols-3
             ">   <!--this is the posts holder-->
-    <?php
-        if(have_posts()){
-            while(have_posts()){
-                the_post();
-    ?>
+            <?php
+    // Custom query to fetch posts
+$args = array(
+    'post_type' => 'post', // Fetch posts
+    'posts_per_page' => 9 // Number of posts to display
+);
+
+$custom_query = new WP_Query($args);
+
+
+    if($custom_query->have_posts()){
+        while($custom_query->have_posts()){
+            $custom_query->the_post();
+?>
+
 
 
         <div class="relative p-[1rem] pb-[3rem] bg-secondary-black rounded-xl
