@@ -1,10 +1,16 @@
+<?php
+/*
+Template Name: Homepage
+*/
+?>
+
 <?php 
 get_header();
 ?>
 <div class="fron-page-wrapper overflow-hidden">
 
-
-    <a href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <img src="http://localhost:8080/lawfirm/wp-content/uploads/2024/08/social.png" alt=""></a>
+    <a href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" 
+    class="whatsapp" target="_blank"> <img src="http://localhost:8080/lawfirm/wp-content/uploads/2024/08/social.png" alt=""></a>
     <!--this is whtwsapp code-->
 
     <section class="relative bg-main-white w-full pt-32
@@ -463,7 +469,7 @@ get_header();
     </section>
 
     <!-- ============================================================================================================================================================ -->
-</div>
+    </div>
 <?php 
 get_footer();
 ?>

@@ -79,3 +79,51 @@ function hidesign() {
 dhtform.addEventListener("click", () => {
   hidesign();
 });
+//
+//
+//
+//
+//
+//
+//
+// this to back to the top of the page
+const scrollToTop = document.querySelector("html");
+const scrollTrigger = document.querySelector("button.back-to-the-top");
+
+const scrollHeight = document.documentElement.scrollHeight;
+const clientHeight = document.documentElement.clientHeight;
+const scrollSpace = scrollHeight - clientHeight;
+
+const clientWidth = document.documentElement.clientWidth;
+
+window.onscroll = () => {
+  if (scrollY > 300) {
+    if (!scrollTrigger.classList.contains("ready-to-go-up")) {
+      scrollTrigger.classList.add("ready-to-go-up");
+    }
+  } else {
+    if (scrollTrigger.classList.contains("ready-to-go-up")) {
+      scrollTrigger.classList.remove("ready-to-go-up");
+    }
+  }
+
+  if (clientHeight > clientWidth) {
+    if (scrollY >= scrollSpace - 200) {
+      if (!scrollTrigger.classList.contains("pagebottom")) {
+        scrollTrigger.classList.add("pagebottom");
+      }
+    } else {
+      if (scrollTrigger.classList.contains("pagebottom")) {
+        scrollTrigger.classList.remove("pagebottom");
+      }
+    }
+  }
+};
+
+function backToPageTop() {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}

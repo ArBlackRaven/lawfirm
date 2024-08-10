@@ -3,8 +3,6 @@
 Template Name: Posts
 */
 ?>
-
-
 <?php
 get_header();
 ?>

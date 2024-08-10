@@ -6,6 +6,7 @@ version: 1.0.0*/
 
 * {
   font-family: "IBM-Plex-Sans";
+  text-wrap: wrap;
 }
 body {
   display: grid;
@@ -15,6 +16,12 @@ body {
 }
 .appear {
   display: block;
+}
+button.ready-to-go-up {
+  right: 3rem;
+}
+.pagebottom {
+  bottom: 90vh;
 }
 /* 
 =

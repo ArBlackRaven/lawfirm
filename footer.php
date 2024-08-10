@@ -1,4 +1,11 @@
-        <footer class="relative bg-secondary-black pt-[3rem]">
+<footer class=" bg-secondary-black pt-[3rem]">
+            <button onclick="backToPageTop()" class="back-to-the-top fixed z-[100] h-[3rem] w-[3rem] bg-secondary-gold text-main-black 
+                                                    right-[-3rem] bottom-[8rem] flex justify-center items-center rounded-full
+                                                    duration-300
+                                                    "> <!-- this is the arrow that leads to the bagening of the page  -->
+            
+                <?php echo do_shortcode('[icon name="chevron-up" prefix="fas"]')?>
+            </button>
             <div class="footersubform flex justify-center 
                         phone:flex-col phone:items-center phone:gap-0
                         md:flex-row md:gap-[2rem]
