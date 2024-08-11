@@ -23,6 +23,12 @@ button.ready-to-go-up {
 .pagebottom {
   bottom: 90vh;
 }
+.show-up {
+  animation: show-up 0.3s linear;
+}
+.hide-down {
+  animation: hide-down 0.3s linear;
+}
 /* 
 =
 =
@@ -178,7 +184,7 @@ a.services-icons:hover svg {
   text-align: center;
   font-size: 1.5rem;
   padding: 0 3rem;
-  width: 50%;
+  width: 75%;
   margin: auto;
 }
 
@@ -287,9 +293,13 @@ select {
   .frm_form_field label {
     font-size: 1.2rem;
   }
+}
+@media (max-width: 1024px) {
   .sign-form .frm_error_style,
   .sign-form .frm_message {
-    font-size: 1.5rem;
+    padding: 0 0rem;
+    font-size: 1.2rem;
+    width: 100%;
   }
 }
 /* ===================================================== this hard code for contact us form =================================================== */
@@ -457,3 +467,20 @@ ul.post-categories li:hover {
   font-weight: 700;
 }
 /* ===================================================== fonts =================================================== */
+
+@keyframes show-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide-down {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

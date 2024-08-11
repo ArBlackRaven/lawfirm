@@ -67,18 +67,39 @@ if (sessionStorage.getItem("display") == null) {
   }
 }
 
+// this to show the form
 function showsign() {
   sessionStorage.setItem("display", "appear");
   dform.classList.remove("hidden");
+
+  dform.classList.contains("hide-down")
+    ? dform.classList.remove("hide-down")
+    : null; //check not to stack the class
+
+  !dform.classList.contains("show-up") ? dform.classList.add("show-up") : null; //check not to stack the class
 }
+
+//this to hide the form
 function hidesign() {
   sessionStorage.setItem("display", "disappear");
-  dform.classList.add("hidden");
+
+  dform.classList.contains("show-up")
+    ? dform.classList.remove("show-up")
+    : null; //check not to stack the class
+
+  !dform.classList.contains("hide-down")
+    ? dform.classList.add("hide-down")
+    : null; //check not to stack the class
+
+  setTimeout(() => {
+    dform.classList.add("hidden");
+  }, 300); //this time to wait for the animation to finish
 }
 
 dhtform.addEventListener("click", () => {
   hidesign();
-});
+}); // if the user click on anything but the form the form will hide
+
 //
 //
 //
