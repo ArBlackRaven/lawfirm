@@ -367,7 +367,7 @@ get_header();
         lg:grid-cols-2 lg:grid-rows-1
         "> <!--the holder of two services-->
 
-            <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-fit duration-300
+            <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-full duration-300
                         hover:bg-secondary-gold hover:text-spicial-3 hover:border-spicial-3
                         phone:p-[1rem] phone:pl-[5rem] 
                         lg:pt-[2rem] lg:pr-[2rem] lg:pb-[3rem] lg:pl-[8rem]
@@ -380,7 +380,7 @@ get_header();
                 <p class="text-main-white font-semibold duration-150
                             phone:text-[0.8rem]
                             lg:text-[1.2rem]
-                            "> يعمل مكتبنا ع اداره القضايا الاداريه والترافع بها ويشمل ذلك كافه القضايا الناشئه عن عقود الخدمات والمقاولات والتوريد وكافه المنازعات التجاريه الاخرى </p><!--this is the description of the service-->
+                            "><?php the_field("single_survices")?></p><!--this is the description of the service-->
                             
                 <div class="absolute h-[75%] left-0 bottom-[50%] translate-y-[50%]
                             phone:w-[5rem]
@@ -400,7 +400,7 @@ get_header();
                 </div>
 
             </a>
-            <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-fit duration-300
+            <a class="services-icons relative border-2 border-secondary-gold rounded-3xl h-full duration-300
                         hover:bg-secondary-gold hover:text-spicial-3 hover:border-spicial-3
                         phone:p-[1rem] phone:pl-[5rem] 
                         lg:pt-[2rem] lg:pr-[2rem] lg:pb-[3rem] lg:pl-[8rem]
@@ -413,7 +413,7 @@ get_header();
                 <p class="text-main-white font-semibold duration-150
                             phone:text-[0.8rem]
                             lg:text-[1.2rem]
-                            "> يعمل مكتبنا ع اداره القضايا الاداريه والترافع بها ويشمل ذلك كافه القضايا الناشئه عن عقود الخدمات والمقاولات والتوريد وكافه المنازعات التجاريه الاخرى </p><!--this is the description of the service-->
+                            "><?php the_field("company_survices")?></p><!--this is the description of the service-->
                 <div class="absolute h-[75%] left-0 bottom-[50%] translate-y-[50%]
                             phone:w-[5rem]
                             lg:w-[8rem]

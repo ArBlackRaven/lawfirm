@@ -1,4 +1,5 @@
 <?php 
+// adding the support
     add_theme_support("menus");
     add_theme_support( 'post-thumbnails' );
 
@@ -24,6 +25,18 @@ function register_the_menus () {
         )
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
  // add the sheets
 add_action("wp_enqueue_scripts","add_styles");
 

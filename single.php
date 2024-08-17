@@ -2,7 +2,12 @@
 get_header();
 ?>
 
-<div class="px-[5%] bg-main-black py-[3rem]"> <!-- this is he holder of the sinle post-->
+<div id="images-conatiner" class="px-[5%] bg-main-black py-[3rem]"> <!-- this is he holder of the sinle post-->
+
+<div class="fullscreen-overlay" id="fullscreenOverlay">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+</div><!-- this is the image viewer -->
+
 <?php // start with the loop
 if(have_posts()){
     while(have_posts()){
@@ -24,8 +29,8 @@ if(have_posts()){
 
     <div>
         <!--this id the image holder-->
-        <div class="p-[1rem]">
-            <img class="h-full w-full object-cover" src="<?php the_post_thumbnail_url()?>" alt="">
+        <div class="p-[1rem] ">
+            <img class="h-full w-full object-cover image-item" src="<?php the_post_thumbnail_url()?>" alt="">
         </div>
 
     </div>
